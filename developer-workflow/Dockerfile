@@ -1,8 +1,8 @@
-# For this example we're going to use Python
+# This example uses Python
 # Alpine is a lightweight OS that makes for smaller containers
 FROM python:3.4-alpine
 
-# Copy our current working directory contents into the /code folder 
+# Copy the current working directory contents into the /code folder 
 COPY . /code
 
 # Set the default directory to be /code
