@@ -1,0 +1,24 @@
+version: '3'
+services:
+  # Create a container for our webserver
+  web:
+    # Look for Dockerfile in the current working directory and build it.
+    build: .
+    # Expose 8080 within a container to 8080 on the host.
+    ports:
+     - "8080:8080"
+    # Mount the current working directory into /code within the container.
+    # This is a common practice to iterate on code quickly while using a containerized
+    # environment
+    volumes:
+     - .:/code
+    # Use the .env file with our values
+    env_file: 
+      - ./.env
+  # Create a container for our redis instance
+  # With compose, it will automatically create an alias so that the "web" container
+  # can ping and reference the "redis" container simply by name.
+  redis:
+    # Use a pre-built image as opposed to building one
+    image: "redis:alpine"
+    # With no other configuration, it will simply run this container

@@ -1,11 +1,15 @@
-FROM ubuntu:18.04
+# For this example we're going to use Python
+# Alpine is a lightweight OS that makes for smaller containers
+FROM python:3.4-alpine
 
-RUN apt-get update
+# Copy our current working directory contents into the /code folder 
+COPY . /code
 
-RUN apt-get -y install nginx
+# Set the default directory to be /code
+WORKDIR /code
 
-COPY website /var/www
+# Install Python dependencies
+RUN pip install -r requirements.txt
 
-EXPOSE 80 443
-
-CMD ["nginx", "-g", "daemon off;"]
+# Set the default command to be `python app.py`
+CMD ["python", "app.py"]
