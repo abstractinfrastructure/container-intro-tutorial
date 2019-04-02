@@ -44,7 +44,7 @@ Use the below command references to complete the exercises.
 
 * Create a container using the `busybox` image and instruct it to echo:
   `Hello from busybox!`.
-* Then view it's status using list command. **HINT:** Remember to view **all**.
+* View it's status using list command.
 
 [[Solution](./solutions.md#exercise-1)]
 
@@ -54,8 +54,8 @@ Use the below command references to complete the exercises.
 
 * Create an interactive container using the `busybox` image using `/bin/sh` for
   the shell.
-* Then list the contents of the `/etc` directory and exit the
-  container.
+* List the contents of the `/etc` directory
+* Exit the container.
 
 [[Solution](./solutions.md#exercise-2)]
 
@@ -65,7 +65,8 @@ Use the below command references to complete the exercises.
 
 * Create a daemonized container using the `busybox` image and the following
   command: `/bin/sh -c "while true; do echo hello there; sleep 2; done"`
-* After a few seconds, view the logs. Then stop it and view it's status.
+* After a few seconds, view the logs.
+* Then stop it and view it's status.
 
 [[Solution](./solutions.md#exercise-3)]
 
@@ -73,8 +74,10 @@ Use the below command references to complete the exercises.
 
 ## Exercise 4
 
-Using the container from exercise 3 - Start it. View it's status using the
-list command, then view it's logs. Lastly, stop it.
+* Using the container from exercise 3 - Start it.
+* View it's status using the list command.
+* Then view it's logs.
+* Stop the container.
 
 [[Solution](./solutions.md#exercise-4)]
 
