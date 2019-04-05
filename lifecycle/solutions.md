@@ -2,26 +2,22 @@
 
 ## Exercise 1
 
-Create a container using the `busybox` image and instruct it to echo:
-`Hello from busybox!`. Then view it's status using list command. **HINT:**
-Remember to view **all**.
-
-**Run command:**
+**Command: Run the Container**
 ```
 # docker run <options> <image> <command>
 docker run busybox echo Hello from busybox!`
 ```
-**Command output:**
+**Output**
 ```
 Hello from busybox!
 ```
 
-**Viewing the container status:**
+**Command: Container Status**
 ```
 docker ps -a
 ```
 
-**Status output:**
+**Output: Container Status**
 ```
 $ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
@@ -34,21 +30,18 @@ c6ddaad1d6e4        alpine              "echo hello from alp…"   13 hours ago 
 
 ## Exercise 2
 
-Create an interactive container using the `busybox` image using `/bin/sh` for
-the command. Then list the contents of the `/etc` directory then exit the
-container.
-
-**Command:**
+**Command: Run the Container**
 ```
 # docker run -i -t <options> <image> <command>
 docker run -it busybox /bin/sh
 ```
-**Listing the contents of `/etc`**
+
+**Command: Listing the contents of `/etc`**
 ```
 ls /etc
 ```
 
-**ls output:**
+**Output: ls**
 ```
 group        hostname     hosts        localtime    mtab         network      passwd       resolv.conf  shadow
 ```
@@ -59,22 +52,18 @@ Exit the container by typing `exit` and pressing `Enter`.
 
 ## Exercise 3
 
-Create a daemonized container using the `busybox` image and use the following
-command: `/bin/sh -c "while true; do echo hello there; sleep 2; done"` After
-a few seconds, view the logs. Then stop it and view it's status.
-
-**Run command:**
+**Command: Run Container**
 ```
 # docker run -d <options> <image> <command>
 docker run -d busybox /bin/sh -c "while true; do echo hello there; sleep 2; done"
 ```
 
-**Viewing container logs:**
+**Command: Viewing Container Logs**
 ```
 # docker logs <container name | container ID>
 docker logs loving_panini
 ```
-**Output:**
+**Output: Viewing Container Logs**
 ```
 $ docker logs -f loving_panini
 hello there
@@ -84,13 +73,13 @@ hello there
 hello there
 ```
 
-**Stop command:**
+**Command: Stop Container**
 ```
 # docker stop <contaienr name | container ID>
 docker stop loving_panini
 ```
 
-**Stop output:**
+**Output: Stop Container**
 ```
 $ docker stop loving_panini
 loving_panini
@@ -100,40 +89,37 @@ loving_panini
 
 ## Exercise 4
 
-Using the container from exercise 3 - Start it. View it's status using the
-list command, then view it's logs. Lastly, stop it.
-
-**Start command:**
+**Command: Start Container**
 ```
 # docker start <container name | container ID>
 docker start loving_panini
 ```
 
-**Start output:**
+**Output: Start Container**
 ```
 $ docker start loving_panini
 loving_panini
 ```
 
-**View status:**
+**Command: View Status**
 ```
 docker ps
 ```
 
-**View output:**
+**Output: View Status**
 ```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 c77fb79df112        busybox             "/bin/sh -c 'while t…"   8 minutes ago       Up 8 minutes                            loving_panini
 ```
 
-**View logs:**
+**Command: View logs**
 ```
 # docker logs <container name | container ID>
 docker logs loving_panini
 ```
 
-**Log output:**
+**Output: View Logs**
 ```
 $ docker logs loving_panini
 hello there
@@ -144,23 +130,20 @@ hello there
 hello there
 ```
 
-**Stopping the container:**
+**Command: Stopping the Container:**
 ```
+# docker stop <contaienr name | container ID>
 docker stop loving_panini
 ```
-**Stop output:**
-```
-$ docker stop loving_panini
-loving_panini
-```
 
-**Viewing container status:**
+**Command: View Status**
 ```
 docker ps -a
 ```
 
-**Status output:**
+**Output: Status**
 ```
+$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 c77fb79df112        busybox             "/bin/sh -c 'while t…"   8 minutes ago       Exited (137) 15 seconds ago             loving_panini
 ```
@@ -170,13 +153,18 @@ c77fb79df112        busybox             "/bin/sh -c 'while t…"   8 minutes ago
 
 ## Exercise 5
 
-Delete all the containers created in these exercises.
-
-**Command**
+**Command: Remove Container**
 ```
+# docker rm <container name/container ID>
 docker rm loving_panini
 <or>
 docker rm $(docker ps -a -q)
 <or>
 docker container prune
+```
+
+**Output: Remove container**
+```
+docker rm loving_panini
+loving_panini
 ```

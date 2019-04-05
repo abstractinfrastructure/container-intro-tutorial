@@ -2,13 +2,13 @@
 
 ## Exercise 1
 
-**Command to pull alpine image**
+**Command: Pull Image**
 ```
 # docker pull <image name>
 # latest can be omitted and it will automatically be applied
 docker pull alpine:latest
 ```
-**Output:**
+**Output: Pull Image**
 ```
 $ docker pull alpine
 Using default tag: latest
@@ -18,18 +18,18 @@ Digest: sha256:644fcb1a676b5165371437feaa922943aaf7afcfa8bfee4472f6860aad1ef2a0
 Status: Downloaded newer image for alpine:latest
 ```
 
-**Tagging the image:**
+**Command: Tagging the Image**
 ```
 # docker tag <image name> <new image name>
 docker tag alpine myalpine
 ```
 **NOTE:** There is no output after tagging an image
 
-**Command to view images:**
+**Command: View Images**
 ```
 docker images
 ```
-**Output:**
+**Output: View Images**
 ```
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 alpine              latest              5cb3aa00f899        3 weeks ago         5.53MB
@@ -59,12 +59,12 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-**Command to build:**
+**Command: Build Image**
 ```
 docker build -t mynginx .
 ```
 
-**Output:**
+**Output: Build Image**
 ```
 $ docker build -t mynginx .
 Sending build context to Docker daemon  5.632kB
@@ -116,12 +116,12 @@ Successfully built 151a22d156f7
 Successfully tagged mynginx:latest
 ```
 
-**Command to run container:**
+**Command: Run Containers**
 ```
 docker run -d -p 80:80 mynginx
 ```
 
-**Command to stop container:**
+**Command: Stop Container**
 ```
 docker stop <container name>
 ```
@@ -150,12 +150,12 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-**Command to build:**
+**Command: Build Container**
 ```
 docker build -t mynginx .
 ```
 
-**Output:**
+**Output: Build Container**
 ```
 $ docker build -t mynginx .
 Sending build context to Docker daemon  5.632kB
@@ -195,12 +195,12 @@ Successfully built 1ec9e93143e2
 Successfully tagged mynginx:latest
 ```
 
-**Command to view images:**
+**Command: View Images**
 ```
 docker images
 ```
 
-**Output:**
+**Output: View Imagess**
 ```
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
@@ -212,12 +212,12 @@ myalpine            latest              5cb3aa00f899        3 weeks ago         
 
 ## Exercise 4
 
-**Command to untag (remove)**
+**Command: Untag (remove) Image**
 ```
 # docker rmi <image tag/image ID>
 docker rmi d6b7fe55c587
 ```
-**Output:**
+**Output: Untag**
 ```
 $ docker rmi d6b7fe55c587
 Deleted: sha256:d6b7fe55c58751cbed705552c38daa0e4d238a0df01064939ccaf7bac83bf483

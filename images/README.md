@@ -1,5 +1,15 @@
 ## Images
 
+The following exercises cover core commands related to working with container
+images.
+
+**NOTE:** Pushing a container image to Docker Hub is **NOT** covered in these
+exercises. The tutorial should be able to be completed without setting up any
+sort of external account. For specifics related to pushing an image, see the
+main [Docker documentation] on the [push command].
+
+Use the below command references to complete the exercises.
+
 ### Container Image Commands
 
 | Command                                          | Description                               |
@@ -88,6 +98,8 @@ For a more thorough list, see the [Dockerfile Reference in the main Docker docs]
 
 ## Exercise 4
 
-- Untag (delete) the image with no tag (`<none>`)
+- Untag (delete) the image with no tag (`<none>`).
 
 [dockerfile]: ./Dockerfile
+[docker documentation]: https://docs.docker.com/
+[push command]: https://docs.docker.com/engine/reference/commandline/push/
