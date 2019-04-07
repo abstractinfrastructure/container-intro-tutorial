@@ -1,5 +1,11 @@
 # Networking
 
+These exercise go over how to both expose the workloads of containers externally,
+and how to use container created networks to effectively create a multi-tier
+application _"stack"_.
+
+Use the below command references to complete the exercises.
+
 ### Exposing a Workload
 
 | Command                                              | Description                                           |
@@ -27,6 +33,8 @@
 
 ## Exercise 1
 
+Bind a service on a container to a host's IP and port.
+
 - Use either the `mynginx` image from the [Images exercises] or pull the image
   `nginx:stable-alpine` to create a daemonized container.
    - It should listen on `127.0.0.1`
@@ -36,9 +44,18 @@
   in the container's status.
 - Stop and delete the container.
 
+Binding a container service to a host IP and port is **how** container services
+are consumed by external entities and services. Understanding how it works and
+how you can remap ports (e.g. `8080` -> `80`) is essential to understanding
+how container services are consumed.
+
+
 [[Solution](./solutions.md#exercise-1)]
 
+
 ## Exercise 2
+
+Explore and gain an understanding of how a container network may be used.
 
 - Create a new `bridge` (default) network called `mynetwork`.
 - List the networks and ensure it is configured correctly.
@@ -52,11 +69,27 @@
       (Uses netcat (`nc`) in a fashion similar to curl)
   - Exit and remove the interactive container.
 
+Containers can be attached to custom "internal" networks. Exposed ports that are
+defined in the container image's Dockerfile **will** be exposed on this internal
+network without having to create a mapping. Usage of these internal networks are
+useful for multi-tier applications such as a web server and database where you
+would like to expose the webserver publicly, but avoid exposing the database.
+
+They can communicate privately on the internal network and only have the
+webserver publicly accessible.
+
+
 [[Solution](./solutions.md#exercise-2)]
+
 
 ## Exercise 3
 
+Remove the container network.
+
 - Remove the network `mynetwork`. **HINT:** This may involve more than just
   deleting the network.
+
+You cannot remove a network without first removing all containers that are
+attached to that network.
 
 [[Solution](./solutions.md#exercise-3)]

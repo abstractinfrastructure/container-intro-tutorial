@@ -2,8 +2,11 @@
 
 ## Before you Begin
 
-These tutorials accompany the presentation [Introduction to Containers]. To
-participate in the labs, install the [Docker Community Edition (CE) Engine][ce]
+These exercises accompany the presentation [Introduction to Containers]. To
+participate in the labs, install the [Docker Community Edition (CE) Engine][ce].
+**NOTE:** For linux users, you will need to additionally install
+[docker-compose].
+
 
 - [OSX Install](https://docs.docker.com/docker-for-mac/install/)
 - [Windows Install](https://docs.docker.com/docker-for-windows/install/)
@@ -35,19 +38,20 @@ troubleshooting:
 
 ---
 
-## Tutorial Index
+## Exercise Index
 
-- [Lifecycle] - Explore the basics and core concepts of working with containers.
-- [Images] - Learn what goes into a container image.
-- [Networking] - Dive into mapping
-- [Storage] - Map persistent storage into an ephemeral container.
-- [Inspecting and Debugging] -
-- [Developer Workflow] -
-- [Best Practices, Security, and Tips] -
+- [Lifecycle]
+- [Images]
+- [Networking]
+- [Storage]
+- [Inspecting and Debugging]
+- [Developer Workflow]
+- [Best Practices, Security, and Tips]
 
 
 [Introduction to Containers]: https://docs.google.com/presentation/d/1P7TlA2TF4xRWMyVcjC7WQTRdQE3O7R1CJII5UPfHt2s/edit?usp=sharing
 [ce]: https://docs.docker.com/install/
+[docker-compse]: https://docs.docker.com/compose/install/
 [lifecycle]: /lifecycle/README.md
 [images]: /images/README.md
 [networking]: /networking/README.md

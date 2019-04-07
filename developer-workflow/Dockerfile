@@ -1,6 +1,6 @@
 # This example uses Python
 # Alpine is a lightweight OS that makes for smaller containers
-FROM python:3.4-alpine
+FROM python:alpine
 
 # Copy the current working directory contents into the /code folder 
 COPY . /code

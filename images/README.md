@@ -58,6 +58,8 @@ For a more thorough list, see the [Dockerfile Reference in the main Docker docs]
 
 ## Exercise 1
 
+Use the pull command to pull an image.
+
 - Pull the `latest` version of the `alpine` image.
 - `tag` the image as `myalpine:latest`
 - View all the locally stored images.
@@ -67,6 +69,8 @@ For a more thorough list, see the [Dockerfile Reference in the main Docker docs]
 ---
 
 ## Exercise 2
+
+Learn how to build a container image.
 
 - Update the [Dockerfile] in this directory with the following changes:
   - Base it off the `myalpine` image tagged in the previous exercise.
@@ -85,20 +89,40 @@ For a more thorough list, see the [Dockerfile Reference in the main Docker docs]
   see the "Welcome to nginx!" page at http://localhost
 - Stop the container.
 
+Container images allow you to bundle up and distribute your application in an
+easy to consume form. Using a Dockerfile you can build these applications in a
+compostable and reusable form that can be built off of and extended for a
+variety of purposes.
+
 
 [[Solution](./solutions.md#exercise-2)]
 
 
 ## Exercise 3
 
+Optimize the container image.
+
 - Using the [Dockerfile] from the previous example. Update it to only use a
   single `ENV` and `RUN` command.
 - Rebuild the image calling it the same thing: `mynginx`
 - View all the locally stored images and note the difference.
 
+In general it is best to build an image with fewer layers that are logically
+grouped together. These tend to be smaller in size and easier to understand.
+How many layers and when to break them up is subjective, but as you build and
+use more, you will find what works best for you and your workflow.
+
+[[Solution](./solutions.md#exercise-3)]
+
+
 ## Exercise 4
 
+Remove a container image.
+
 - Untag (delete) the image with no tag (`<none>`).
+
+[[Solution](./solutions.md#exercise-4)]
+
 
 [dockerfile]: ./Dockerfile
 [docker documentation]: https://docs.docker.com/

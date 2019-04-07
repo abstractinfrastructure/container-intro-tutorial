@@ -1,7 +1,8 @@
 # Container Lifecycle
 
 These exercises cover the basics container lifecycle commands related to
-creating, starting, stopping and deleting a container.
+creating, starting, stopping and deleting a container. They are essential to
+working day-to-day with containers.
 
 Use the below command references to complete the exercises.
 
@@ -42,6 +43,8 @@ Use the below command references to complete the exercises.
 
 ## Exercise 1
 
+Create a simple container.
+
 * Create a container using the `busybox` image and instruct it to echo:
   `Hello from busybox!`.
 * View it's status using list command.
@@ -51,6 +54,8 @@ Use the below command references to complete the exercises.
 ---
 
 ## Exercise 2
+
+Create an interactive container.
 
 * Create an interactive container using the `busybox` image using `/bin/sh` for
   the shell.
@@ -63,6 +68,8 @@ Use the below command references to complete the exercises.
 
 ## Exercise 3
 
+Create a daemonized container.
+
 * Create a daemonized container using the `busybox` image and the following
   command: `/bin/sh -c "while true; do echo hello there; sleep 2; done"`
 * After a few seconds, view the logs.
@@ -74,6 +81,8 @@ Use the below command references to complete the exercises.
 
 ## Exercise 4
 
+Start and Stop a container.
+
 * Using the container from exercise 3 - Start it.
 * View it's status using the list command.
 * Then view it's logs.
@@ -84,6 +93,8 @@ Use the below command references to complete the exercises.
 ---
 
 ## Exercise 5
+
+Remove a container.
 
 Delete all the containers created in these exercises.
 
