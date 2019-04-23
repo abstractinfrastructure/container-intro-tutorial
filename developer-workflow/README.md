@@ -53,4 +53,4 @@ Run a multi-container application locally using `docker-compose`.
 
 * Verify that the config changes have worked by running `docker-compose up` and, when running, opening http://localhost:9000 in a browser.
 
-[[Solution](./solution/)]
+[[Solution](./app/solution/)]
