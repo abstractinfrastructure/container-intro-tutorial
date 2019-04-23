@@ -4,9 +4,9 @@ services:
   web:
     # Look for Dockerfile in the current working directory and build it.
     build: .
-    # Expose 8080 within a container to 8080 on the host.
+    # Expose 9000 within a container to 9000 on the host.
     ports:
-     - "8080:8080"
+     - "9000:9000"
     # Mount the current working directory into /code within the container.
     # This is a common practice to iterate on code quickly while using a containerized
     # environment
